@@ -1,0 +1,15 @@
+
+<h1 class="text-center">Color picker app</h1>
+<br>
+<div class="container">
+  <div>
+    <div [ngStyle]="{backgroundColor:color.color}" style="height: 100px ;width: 100px"></div>
+  </div>
+  <div>
+    <lable>
+      Choose color :
+      <br>
+      <input class="justify-content-center" type="color" (input)="changeColor($event.target)" [value]="color.color" >
+    </lable>
+  </div>
+</div>
