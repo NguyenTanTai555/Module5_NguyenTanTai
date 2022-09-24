@@ -1,0 +1,62 @@
+<div class="container">
+  <h1 class="text-center text-light mt-4">Customer List</h1>
+  <form class="d-flex m-5 mt-5">
+    <input class="form-control me-2" type="search" placeholder="Search customer name" aria-label="Search"
+           name="name">
+    <input class="form-control me-2" type="search" placeholder="Search customer type" aria-label="Search"
+           name="typeCustomer">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+  <th><a href="/customer/formCreate"><span class="btn btn-primary text-white" id="addCus" title="Bấm Vô đây để thêm nè">Add new Customer</span></a></th>
+  <table class="table table-striped text-black table-view text-center ">
+    <tr>
+      <th>#</th>
+      <th>Full name</th>
+      <th>Date of birth</th>
+      <th>Id Card</th>
+      <th>Phone Number</th>
+      <th>TypeCustomer</th>
+      <th>Address</th>
+      <th colspan="2">Action</th>
+    </tr>
+    <tr >
+      <td>{{customer.id}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.dateOfBirth}}</td>
+      <td>{{customer.idCard}}</td>
+      <td>{{customer.phoneNumber}}</td>
+      <td>{{customer.typeCustomer.name}}</td>
+      <td>{{customer.address}}</td>
+      <td>
+        <a>
+          <span class="btn bg-primary text-white">Edit</span>
+        </a>
+        <button type="button" class="btn border-0 bg-danger text-white"
+                data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Delete
+        </button>
+      </td>
+    </tr>
+  </table>
+  <!--Modal delete-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <form action="/customer/delete" method="post">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Delete customer</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <input type="text" readonly class="form-control border-0" id="deleteId" name="id" [value]="customer.id" >
+          </div>
+          <div class="modal-footer">
+            <button type="submit" class="btn border-0 bg-danger text-white" data-bs-dismiss="modal">Delete Now</button>
+            <button type="button" class="btn border-0 bg-primary text-white ">Back</button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+  <!--    Modal edit-->
+</div>

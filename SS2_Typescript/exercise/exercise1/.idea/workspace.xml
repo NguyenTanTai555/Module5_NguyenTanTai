@@ -24,25 +24,9 @@
       <change beforePath="$PROJECT_DIR$/../../../CaseStudy/html/header&amp;footer/startbootstrap-agency-gh-pages/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CaseStudy/html/header&amp;footer/startbootstrap-agency-gh-pages/footer.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CaseStudy/html/header&amp;footer/startbootstrap-agency-gh-pages/header.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CaseStudy/html/header&amp;footer/startbootstrap-agency-gh-pages/header.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CaseStudy/html/header&amp;footer/startbootstrap-agency-gh-pages/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CaseStudy/html/header&amp;footer/startbootstrap-agency-gh-pages/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CaseStudy2/html/header&amp;footer/property-1.0.0/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CaseStudy2/html/header&amp;footer/property-1.0.0/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../CaseStudy2/html/header&amp;footer/property-1.0.0/services.html" beforeDir="false" afterPath="$PROJECT_DIR$/../../../CaseStudy2/html/header&amp;footer/property-1.0.0/services.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../CaseStudyHandler/html/home.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/Typescript_variable/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/Typescript_variable/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/Typescript_variable/src/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/Typescript_variable/src/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-control-flow-and-loop/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-control-flow-and-loop/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-control-flow-and-loop/src/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-control-flow-and-loop/src/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-is-prime/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-is-prime/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-is-prime/src/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-is-prime/src/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-is-prime/src/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-is-prime/src/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-promise/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-promise/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-promise/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-promise/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-promise/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-promise/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-shape/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-shape/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-shape/src/IArea.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-shape/src/IArea.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-shape/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-shape/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-shape/src/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-shape/src/rectangle.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-shape/src/rectangle.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-shape/src/shape.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-shape/src/shape.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-shape/src/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../practice/typescript-shape/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/../../practice/typescript-shape/tsconfig.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,7 +41,7 @@
     </option>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../.." />
   </component>
   <component name="ProjectId" id="2F3r25pPxCbufuoH5VFJVBtRmEc" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -70,7 +54,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../CaseStudy2/html/header&amp;footer" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../SS3_AngularOverView/practice" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -92,6 +76,7 @@
       <option name="presentableId" value="Default" />
       <updated>1663731398624</updated>
       <workItem from="1663731400077" duration="5990000" />
+      <workItem from="1663762063309" duration="350000" />
     </task>
     <servers />
   </component>
@@ -108,11 +93,12 @@
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1663744770863">
+    <state x="463" y="118" key="FileChooserDialogImpl" timestamp="1663762414139">
       <screen x="0" y="0" width="1366" height="728" />
     </state>
-    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1663744770863" />
+    <state x="463" y="118" key="FileChooserDialogImpl/0.0.1366.728@0.0.1366.728" timestamp="1663762414139" />
   </component>
 </project>
