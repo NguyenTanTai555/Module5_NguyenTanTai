@@ -19,6 +19,7 @@ import { ContractListComponent } from './component/contract/contract-list/contra
 import { ContractAddComponent } from './component/contract/contract-add/contract-add.component';
 import { ContractEditComponent } from './component/contract/contract-edit/contract-edit.component';
 import { ContractDeleteComponent } from './component/contract/contract-delete/contract-delete.component';
+import { CustomerTypeComponent } from './component/customer-type/customer-type.component';
 
 @NgModule({
   declarations: [
@@ -38,7 +39,8 @@ import { ContractDeleteComponent } from './component/contract/contract-delete/co
     ContractListComponent,
     ContractAddComponent,
     ContractEditComponent,
-    ContractDeleteComponent
+    ContractDeleteComponent,
+    CustomerTypeComponent
   ],
   imports: [
     BrowserModule,

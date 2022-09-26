@@ -1,4 +1,4 @@
 export interface TypeCustomer {
-  id ?: number;
+  id?: number;
   name?: string;
 }
