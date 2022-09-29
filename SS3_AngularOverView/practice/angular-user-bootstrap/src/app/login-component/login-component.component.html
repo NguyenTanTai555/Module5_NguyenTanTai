@@ -1,0 +1,25 @@
+<div class="col-md-3 mt-4" style="margin: auto ; font-family: 'Bell MT' ;border: 1px solid black ; border-radius: 5px">
+  <form [formGroup]="loginForm" (ngSubmit)="login()" style="padding: 20px">
+    <h1 class="text-primary text-center">Login Form</h1>
+    <hr>
+    <div>
+      <lable for="email">Email</lable>
+      <input type="text" class="form-control" id="email" name="email" formControlName="email" placeholder="ex : abc@gmail.com.vn">
+      <div class="text-danger" *ngIf="!email.valid && (!email.dirty || !email.touched)">
+        <div [hidden]="!email.errors.required"><p>* Email is required</p></div>
+        <div [hidden]="!email.errors.email"><p>* Email input wrong format</p></div>
+      </div>
+    </div>
+    <div>
+      <lable for="password" class="form-label">Password</lable>
+      <input class="form-control" type="password" id="password" name="password" formControlName="password" placeholder="Please enter password here">
+      <div class="text-danger" *ngIf="!password.valid &&(!password.dirty || !password.dirty)">
+        <div [hidden]="!password.errors.required">*Password is required !! Please Enter</div>
+        <div [hidden]="!password.errors.minLength">*Password must be more than 6 characters</div>
+      </div>
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary form-control mt-2" [disabled]="!loginForm.valid">Submid</button>
+    </div>
+  </form>
+</div>
