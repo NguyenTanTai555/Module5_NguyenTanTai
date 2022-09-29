@@ -19,7 +19,7 @@ import { ContractListComponent } from './component/contract/contract-list/contra
 import { ContractAddComponent } from './component/contract/contract-add/contract-add.component';
 import { ContractEditComponent } from './component/contract/contract-edit/contract-edit.component';
 import { ContractDeleteComponent } from './component/contract/contract-delete/contract-delete.component';
-import { CustomerTypeComponent } from './component/customer-type/customer-type.component';
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -40,11 +40,11 @@ import { CustomerTypeComponent } from './component/customer-type/customer-type.c
     ContractAddComponent,
     ContractEditComponent,
     ContractDeleteComponent,
-    CustomerTypeComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,56 +1,44 @@
-<div class="container w-50 mt-4 p-2 mb-4 bg-warning bg-opacity-50" style="border: 1px solid grey; border-radius: 15px">
-  <h3 align="center" class="text-info">Add new Customer</h3>
-  <form class="row g-3" action="/customer/create" method="post">
-
+<div class="container mt-4 p-2 mb-4 bg-opacity-50" style="font-family: 'Bell MT' ">
+  <div class="col-md-12">
+    <lable for="id" class="form-label">ID</lable>
+    <input type="text" class="form-control" id="id" placeholder="Enter ID" [(ngModel)]="customer.id">
+  </div>
     <div class="col-md-12">
       <label for="name" class="form-label">Name</label>
-      <input type="text"  class="form-control" id="name">
+      <input type="text"  class="form-control" id="name" placeholder="Enter Name Here" [(ngModel)]="customer.name">
 
     </div>
     <div class="col-md-12">
       <label for="birthday" class="form-label">Date Of Birth</label>
-      <input type="date" class="form-control" id="birthday">
-
-    </div>
-    <div class="col-md-12">
-      <label  class="form-label me-4">Gender</label>
-      <input type="radio" name="gender" value="true" ><span>Male</span>
-      <input type="radio" name="gender" value="false" ><span>Female</span>
+      <input type="date" class="form-control" id="birthday" [(ngModel)]="customer.dateOfBirth">
 
     </div>
     <div class="col-md-12">
       <label for="id_card" class="form-label">Id Card</label>
-      <input type="text" class="form-control" id="id_card">
+      <input type="text" class="form-control" id="id_card" placeholder="Enter ID Card Of You" [(ngModel)]="customer.idCard">
     </div>
     <div class="col-md-12">
       <label for="phone" class="form-label">Phone Number</label>
-      <input type="text" class="form-control" id="phone">
+      <input type="text" class="form-control" id="phone" placeholder="Enter Phone Number of you" [(ngModel)]="customer.phoneNumber">
 
     </div>
-    <div class="col-md-12 " id="s1" >
-      <label for="email" class="form-label">Email </label>
-      <input type="text" class="form-control" id="email" >
-
-    </div>
-    <div class="input-group mb-3">
+    <div class=" mb-3 ">
+      <lable for="customerType" class="form-label">Customer Type</lable>
       <select name="categoryName" class="form-control">
-        <option>Customer Type</option>
-        <option>Platinum</option>
-        <option>Diamon</option>
-        <option>Silver</option>
-        <option>Gold</option>
+        <option disabled selected>ChooseCustomer Type</option>
+        <ng-container *ngFor="let typeCus of typeCustomer">
+          <option [ngValue]="typeCus">{{typeCus.name}}</option>
+        </ng-container>
       </select>
     </div>
 
-
     <div class="col-md-12 " id="s2" >
       <label for="address" class="form-label">Address</label>
-      <input type="text" class="form-control" id="address" >
+      <input type="text" class="form-control" id="address" placeholder="Enter Address" [(ngModel)]="customer.address" >
 
     </div>
 
-    <div class="col-12 ">
-      <button type="submit" class="btn btn-primary">Save</button>
+    <div class="col-12 mt-2">
+      <button type="submit" class="btn btn-primary w-100" (click)="getCustomer()" data-bs-dismiss="modal" >Save</button>
     </div>
-  </form>
 </div>

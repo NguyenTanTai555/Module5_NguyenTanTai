@@ -1,0 +1,72 @@
+<div class="col-md-3 mt-4" style="font-family: 'Bell MT' ;margin: auto ; border: 1px solid black ; border-radius: 5px">
+  <form [formGroup]="contactForm" (ngSubmit)="onSubmit()" style="padding: 20px">
+    <h1 class="text-center text-primary">Register Form</h1>
+    <hr class="text-primary">
+    <div>
+      <label for="email" >Email </label>
+      <input type="text" id="email" name="email" class="form-control" formControlName="email" placeholder="Enter email here codegym@gmail.com">
+      <div class="text-danger" *ngIf="!email.valid && (!email.dirty || !email.touched)">
+        <div [hidden]="!email.errors.required"><p>Email is required</p></div>
+        <div [hidden]="!email.errors.email"><p>You input wrong format </p></div>
+      </div>
+    </div>
+    <div>
+      <label for="password" >Password </label>
+      <input type="password" id="password" name="password" class="form-control" formControlName="password" placeholder="Enter password here">
+      <div class="text-danger" *ngIf="!password.valid && (!password.touched || !password.dirty)">
+        <div [hidden]="!password.errors.required"><p>* Password is required</p></div>
+        <div [hidden]="!password.errors.minlength"><p>* Password cannot be shorter 6 charactes </p></div>
+      </div>
+    </div>
+    <div>
+      <label for="confirmPassword">Confirm Password </label>
+      <input type="password" id="confirmPassword" name="password" class="form-control" formControlName="confirmPassword" placeholder="Enter confirm password here">
+      <div class="text-danger" *ngIf="!confirmPassword.valid && (!confirmPassword.touched || !confirmPassword.dirty)">
+        <div [hidden]="!confirmPassword.errors.required"><p>* Password is required</p></div>
+        <div [hidden]="!confirmPassword.errors.minlength"><p>* Password cannot be shorter 6 character</p></div>
+      </div>
+      <div *ngIf="contactForm.hasError('invalidPassword')"><p class="text-danger">* Password does not match</p></div>
+    </div>
+    <div>
+      <label  for="country">Country </label>
+      <select id="country" name="country"  formControlName="country" class="form-select">
+        <option selected disabled>Choose Country</option>
+        <ng-container *ngFor="let country of countryList">
+          <option [ngValue]="country.id">{{country.name}}</option>
+        </ng-container>
+      </select>
+      <div class="text-danger" *ngIf="!country.valid && (!country.dirty || !country.touched)">
+        <p>* Country is required</p>
+      </div>
+    </div>
+    <div>
+      <label for="age">Age</label>
+      <input type="text" id="age" value="age" class="form-control" formControlName="age" placeholder="Enter Age">
+      <div class="text-danger" *ngIf="!age.valid && (!age.dirty || !age.touched)">
+        <div [hidden]="!age.errors.required"><p>* Age is required</p></div>
+        <div [hidden]="!age.errors.min"><p>* Age Cannot < 18 </p></div>
+        <div [hidden]="!age.errors.max"><p>* Age Cannot > 100</p></div>
+      </div>
+    </div>
+    <div>
+      <label >Gender </label>
+      <input type="radio" value="male" name="gender" formControlName="gender"> Male
+      <input type="radio" value="female" name="gender" formControlName="gender"> Female
+      <div class="text-danger" *ngIf="!gender.valid && (!gender.touched || !gender.dirty)">
+        <p>* Gender is required</p>
+      </div>
+    </div>
+    <div>
+      <label for="phone">Phone</label>
+      <input type="text" name="phone" id="phone" formControlName="phone" class="form-control" placeholder="Enter Phone of you">
+      <div class="text-danger" *ngIf="!phone.valid && (!phone.dirty || !phone.touched)">
+        <div [hidden]="!phone.errors.required"><p>* Phone is required</p></div>
+        <div [hidden]="!phone.errors.pattern"><p>* Phone wrong format ((+84) or 0 123456789)  </p></div>
+      </div>
+    </div>
+    <div class="mt-2">
+      <button type="submit" class="form-control btn btn-primary" [disabled] = "!contactForm.valid" >Submit</button>
+    </div>
+  </form>
+
+</div>

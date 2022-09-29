@@ -8,6 +8,9 @@ import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { RatingBarComponentComponent } from './rating-bar-component/rating-bar-component.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
+import { TodoComponent } from './todo/todo.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import { RegisterComponentComponent } from './register-component/register-component.component';
 
 @NgModule({
   declarations: [
@@ -16,11 +19,14 @@ import { CountdownTimerComponent } from './countdown-timer/countdown-timer.compo
     NameCardComponent,
     ProgressBarComponent,
     RatingBarComponentComponent,
-    CountdownTimerComponent
+    CountdownTimerComponent,
+    TodoComponent,
+    RegisterComponentComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

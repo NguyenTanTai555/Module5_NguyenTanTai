@@ -7,7 +7,13 @@
            name="typeCustomer">
     <button class="btn btn-outline-success" type="submit">Search</button>
   </form>
-  <th><a href="/customer/formCreate"><span class="btn btn-primary text-white" id="addCus" title="Bấm Vô đây để thêm nè">Add new Customer</span></a></th>
+  <th>
+    <button class="btn btn-primary"
+            data-bs-toggle="modal" data-bs-target="#exampleModal1">
+      Add New Customer
+    </button>
+  </th>
+
   <table class="table table-striped text-black table-view text-center ">
     <tr>
       <th>#</th>
@@ -19,7 +25,7 @@
       <th>Address</th>
       <th colspan="2">Action</th>
     </tr>
-    <tr >
+    <tr *ngFor="let customer of customers">
       <td>{{customer.id}}</td>
       <td>{{customer.name}}</td>
       <td>{{customer.dateOfBirth}}</td>
@@ -48,7 +54,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <input type="text" readonly class="form-control border-0" id="deleteId" name="id" [value]="customer.id" >
+            <input type="text" readonly class="form-control border-0" id="deleteId" name="id"  >
           </div>
           <div class="modal-footer">
             <button type="submit" class="btn border-0 bg-danger text-white" data-bs-dismiss="modal">Delete Now</button>
@@ -58,5 +64,18 @@
       </div>
     </form>
   </div>
-  <!--    Modal edit-->
+  <!--    Modal add-->
+  <div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel1">Add customer</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body container-fluid w-100 ">
+            <app-customer-add (customers)="createCustomer($event)"></app-customer-add>
+          </div>
+        </div>
+      </div>
+  </div>
 </div>
