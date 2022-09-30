@@ -62,7 +62,7 @@ export class CustomerListComponent implements OnInit {
     idCard: '201710892',
     phoneNumber: '0905774661',
     typeCustomer: {
-      id: 3,
+      id: 5,
       name: 'Member'
     },
     address: '25 Nguyễn Thông'
@@ -70,7 +70,7 @@ export class CustomerListComponent implements OnInit {
   ];
   createCustomer(event: any) {
     this.customers.push(event);
-    console.log("địt mẹ")
+    console.log("Ố la")
   }
   constructor() {
   }

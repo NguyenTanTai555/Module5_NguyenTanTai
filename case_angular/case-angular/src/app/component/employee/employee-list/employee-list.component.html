@@ -1,1 +1,46 @@
-<p>employee-list works!</p>
+<div class="container mt-4" style="margin: auto">
+  <form class="d-flex m-5 mt-5">
+    <input class="form-control me-2" type="search" placeholder="Search customer name" aria-label="Search"
+           name="name">
+    <input class="form-control me-2" type="search" placeholder="Search customer type" aria-label="Search"
+           name="typeCustomer">
+    <button class="btn btn-outline-success" type="submit">Search</button>
+  </form>
+  <div style="margin: auto">
+    <button class="btn btn-primary"
+            data-bs-toggle="modal" data-bs-target="#exampleModal1">
+      Add New Customer
+    </button>
+  </div>
+  <h1 class="text-center text-light mt-4">Customer List</h1>
+  <table class="table table-striped text-black table-view text-center">
+    <tr>
+      <th>ID</th>
+      <th>Name</th>
+      <th>Date Of Birth</th>
+      <th>ID Card</th>
+      <th>Phone Number</th>
+      <th>Email</th>
+      <th>Position</th>
+      <th>Division</th>
+      <th>Salary</th>
+      <th colspan="2">Action</th>
+    </tr>
+    <tr *ngFor="let employee of employeeis">
+      <td>{{employee.id}}</td>
+      <td>{{employee.name}}</td>
+      <td>{{employee.dateOfBirth}}</td>
+      <td>{{employee.idCard}}</td>
+      <td>{{employee.phoneNumber}}</td>
+      <td>{{employee.email}}</td>
+      <td>{{employee.position.name}}</td>
+      <td>{{employee.division.name}}</td>
+      <td>{{employee.salary}}</td>
+      <td>
+        <button class="btn"><i class="fa fa-pen"></i></button>
+        <button class="btn"><i class="fa fa-delete-left"></i></button>
+      </td>
+
+    </tr>
+  </table>
+</div>

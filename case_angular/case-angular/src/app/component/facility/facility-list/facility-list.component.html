@@ -1,1 +1,16 @@
-<p>facility-list works!</p>
+<div class="row">
+  <div *ngFor="let facility of facilityList" class="col-lg-4 mt-2">
+    <div class="card ms-5" style="width: 23rem;">
+      <img src="../../../../assets/images/pexels-photo-8417400.jpeg" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">{{facility.name}}</h5>
+        <p class="card-text">RentalType: {{facility.rentType.name}}</p>
+        <p class="card-text">Cost : {{facility.cost}}</p>
+        <p class="card-text">Status: {{facility.status.name}}</p>
+        <a href="#" class="btn btn-warning" >Detail</a>
+        <a href="#" class="btn btn-warning ms-2" >Edit</a>
+        <button class="btn btn-warning float-end">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

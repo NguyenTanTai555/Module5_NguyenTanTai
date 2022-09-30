@@ -3,7 +3,7 @@
     <h1 class="text-primary text-center">Login Form</h1>
     <hr>
     <div>
-      <lable for="email">Email</lable>
+      <p for="email">Email</p>
       <input type="text" class="form-control" id="email" name="email" formControlName="email" placeholder="ex : abc@gmail.com.vn">
       <div class="text-danger" *ngIf="!email.valid && (!email.dirty || !email.touched)">
         <div [hidden]="!email.errors.required"><p>* Email is required</p></div>
@@ -11,7 +11,7 @@
       </div>
     </div>
     <div>
-      <lable for="password" class="form-label">Password</lable>
+      <p for="password" class="form-label">Password</p>
       <input class="form-control" type="password" id="password" name="password" formControlName="password" placeholder="Please enter password here">
       <div class="text-danger" *ngIf="!password.valid &&(!password.dirty || !password.dirty)">
         <div [hidden]="!password.errors.required">*Password is required !! Please Enter</div>

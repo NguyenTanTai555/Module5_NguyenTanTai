@@ -9,10 +9,9 @@ import {TypeCustomer} from "../../../../model/customer/TypeCustomer";
   styleUrls: ['./customer-add.component.css']
 })
 export class CustomerAddComponent implements OnInit {
-  @Output() customers: EventEmitter<Customer> = new EventEmitter();
   //@ts-ignore
   customer: Customer = {};
-
+  customers: Customer[];
   typeCustomer: TypeCustomer[] = [
     {id: 1, name: 'Platinum'},
     {id: 2, name: 'Diamond'},
@@ -27,9 +26,4 @@ export class CustomerAddComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  getCustomer() {
-    this.customers.emit(this.customer);
-    //@ts-ignore
-    this.customer = {};
-  }
 }

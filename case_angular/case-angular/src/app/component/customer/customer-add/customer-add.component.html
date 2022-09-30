@@ -1,15 +1,15 @@
 <div class="container mt-4 p-2 mb-4 bg-opacity-50" style="font-family: 'Bell MT' ">
   <div class="col-md-12">
-    <lable for="id" class="form-label">ID</lable>
+    <div for="id" >ID</div>
     <input type="text" class="form-control" id="id" placeholder="Enter ID" [(ngModel)]="customer.id">
   </div>
     <div class="col-md-12">
-      <label for="name" class="form-label">Name</label>
+      <label for="name" >Name</label>
       <input type="text"  class="form-control" id="name" placeholder="Enter Name Here" [(ngModel)]="customer.name">
 
     </div>
     <div class="col-md-12">
-      <label for="birthday" class="form-label">Date Of Birth</label>
+      <label for="birthday" >Date Of Birth</label>
       <input type="date" class="form-control" id="birthday" [(ngModel)]="customer.dateOfBirth">
 
     </div>
@@ -18,12 +18,12 @@
       <input type="text" class="form-control" id="id_card" placeholder="Enter ID Card Of You" [(ngModel)]="customer.idCard">
     </div>
     <div class="col-md-12">
-      <label for="phone" class="form-label">Phone Number</label>
+      <label for="phone" >Phone Number</label>
       <input type="text" class="form-control" id="phone" placeholder="Enter Phone Number of you" [(ngModel)]="customer.phoneNumber">
 
     </div>
     <div class=" mb-3 ">
-      <lable for="customerType" class="form-label">Customer Type</lable>
+      <div for="customerType" >Customer Type</div>
       <select name="categoryName" class="form-control">
         <option disabled selected>ChooseCustomer Type</option>
         <ng-container *ngFor="let typeCus of typeCustomer">
@@ -33,12 +33,12 @@
     </div>
 
     <div class="col-md-12 " id="s2" >
-      <label for="address" class="form-label">Address</label>
+      <div for="address" >Address</div>
       <input type="text" class="form-control" id="address" placeholder="Enter Address" [(ngModel)]="customer.address" >
 
     </div>
 
     <div class="col-12 mt-2">
-      <button type="submit" class="btn btn-primary w-100" (click)="getCustomer()" data-bs-dismiss="modal" >Save</button>
+      <button type="submit" class="btn btn-primary w-100" data-bs-dismiss="modal" >Save</button>
     </div>
 </div>
