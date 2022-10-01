@@ -7,6 +7,9 @@ import {DictionaryPageComponent} from './dictionary/dictionary-page/dictionary-p
 import {DictionaryDetailComponent} from './dictionary/dictionary-detail/dictionary-detail.component';
 import {UpdateProductComponent} from './product2/update-product/update-product.component';
 import {ProductDeleteComponent} from './product2/delete-product/product-delete.component';
+import {TodoComponent} from './todoA/todo/todo.component';
+
+import {TodoEditComponent} from './todoA/todo-edit/todo-edit.component';
 
 
 const routes: Routes = [
@@ -19,7 +22,7 @@ const routes: Routes = [
     },]
   },
   {
-    path: "",
+    path: '',
     component: ListProductComponent
   }, {
     path: 'product/create',
@@ -39,8 +42,15 @@ const routes: Routes = [
   }, {
     path: 'product/delete/:id',
     component: ProductDeleteComponent
-  }
-
+  },
+  {
+    path: 'todo/list',
+    component: TodoComponent
+  },
+  {
+    path:'todo/edit/:id',
+    component:TodoEditComponent
+  },
 
 ];
 

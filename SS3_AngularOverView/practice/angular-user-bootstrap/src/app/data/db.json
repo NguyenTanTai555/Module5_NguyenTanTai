@@ -1,0 +1,45 @@
+{
+  "product": [
+    {
+      "id": 3,
+      "name": "IPhone 14",
+      "price": 2000000,
+      "description": "New"
+    },
+    {
+      "id": 4,
+      "name": "IPhone 7",
+      "price": 2000000,
+      "description": "Like New"
+    },
+    {
+      "id": 7,
+      "name": "SamSung",
+      "price": 555555,
+      "description": "Like"
+    },
+    {
+      "id": 8,
+      "name": "XiaoMi",
+      "price": "500000",
+      "description": "New New"
+    }
+  ],
+  "todo": [
+    {
+      "id": 3,
+      "content": "hihihaha",
+      "complete": true
+    },
+    {
+      "id": 4,
+      "content": "hohohehe",
+      "complete": false
+    },
+    {
+      "content": "chào",
+      "complete": false,
+      "id": 5
+    }
+  ]
+}

@@ -20,6 +20,7 @@ import { ContractAddComponent } from './component/contract/contract-add/contract
 import { ContractEditComponent } from './component/contract/contract-edit/contract-edit.component';
 import { ContractDeleteComponent } from './component/contract/contract-delete/contract-delete.component';
 import {FormsModule} from "@angular/forms";
+import {HttpClientModule} from '@angular/common/http';
 
 @NgModule({
   declarations: [

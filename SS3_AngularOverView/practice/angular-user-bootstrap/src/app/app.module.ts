@@ -8,7 +8,7 @@ import { NameCardComponent } from './name-card/name-card.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { RatingBarComponentComponent } from './rating-bar-component/rating-bar-component.component';
 import { CountdownTimerComponent } from './countdown-timer/countdown-timer.component';
-import { TodoComponent } from './todo/todo.component';
+import { TodoComponent } from './todoA/todo/todo.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import { RegisterComponentComponent } from './register-component/register-component.component';
 import { LoginComponentComponent } from './login-component/login-component.component';
@@ -20,6 +20,10 @@ import { DictionaryPageComponent } from './dictionary/dictionary-page/dictionary
 import { DictionaryDetailComponent } from './dictionary/dictionary-detail/dictionary-detail.component';
 import { UpdateProductComponent } from './product2/update-product/update-product.component';
 import { ProductDeleteComponent } from './product2/delete-product/product-delete.component';
+import {HttpClientModule} from '@angular/common/http';
+import { TodoEditComponent } from './todoA/todo-edit/todo-edit.component';
+import { TodoUpdateComponent } from './todoA/todo-update/todo-update.component';
+
 
 @NgModule({
   declarations: [
@@ -40,11 +44,14 @@ import { ProductDeleteComponent } from './product2/delete-product/product-delete
     DictionaryDetailComponent,
     UpdateProductComponent,
     ProductDeleteComponent,
+    TodoEditComponent,
+    TodoUpdateComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

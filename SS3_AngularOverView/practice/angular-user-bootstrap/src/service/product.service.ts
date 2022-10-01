@@ -1,50 +1,36 @@
 import {Injectable} from '@angular/core';
 import {Product} from '../model/product';
+import {environment} from '../environments/environment';
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
-  products: Product[] = [{
-    id: 1,
-    name: 'IPhone 12',
-    price: 2400000,
-    description: 'New'
-  },
-    {
-      id: 2,
-      name: 'IPhone 11',
-      price: 1560000,
-      description: 'Like new'
-    }, {
-      id: 3,
-      name: 'IPhone 11 Pro',
-      price: 1895000,
-      description: 'Like new'
-    }];
 
-  getAll() {
-    return this.products;
+  getAll(): Observable<Product> {
+    return this.httpClient.get('http://localhost:3000/product');
   }
-  findById(id: number){
-    return this.products.find(item => item.id == id);
+
+  findById(id: number):Observable<Product> {
+    return this.httpClient.get('http://localhost:3000/product/' + id);
   }
-  updateProduct(id: number , product: Product) {
-    for (let i = 0 ; i<= this.products.length; i++){
-      if (this.products[i].id == id){
-        this.products[i] = product;
-      }
-    }
+
+  // @ts-ignore
+  updateProduct(product: Product){
+    return this.httpClient.patch('http://localhost:3000/product/' +product.id, product);
   }
-  saveProduct(product){
-    this.products.push(product);
+
+  saveProduct(product): Observable<Product> {
+    console.log(product);
+    return this.httpClient.post<Product>('http://localhost:3000/product/', product);
   }
 
   deleteProduct(id: number) {
-    this.products = this.products.filter(product => {
-      return product.id !== id;
-    });
+    return this.httpClient.delete('http://localhost:3000/product/' + id);
   }
-  constructor() {
+
+  constructor(private httpClient: HttpClient) {
   }
 }
