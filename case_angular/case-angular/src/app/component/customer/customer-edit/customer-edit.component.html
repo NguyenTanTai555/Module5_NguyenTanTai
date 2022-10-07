@@ -1,0 +1,46 @@
+<div class="col-md-3 w-50 mt-4 p-2 mb-4 bg-opacity-50" style="margin: auto;font-family: 'Bell MT'">
+  <form [formGroup]="customerForm">
+    <div class="text-center">
+      <h1>Add new Customer</h1>
+      <hr>
+    </div>
+  <div class="col-md-12">
+    <label for="name" >Name</label>
+    <input type="text" formControlName="name"  class="form-control" name="name" id="name" placeholder="Enter Name Here">
+    <div class="text-danger" *ngIf="!name.valid && (!name.touched || !name.dirty)">
+      <div [hidden]="!name.errors.required"><p>* Name is riquired !! Please input file name</p></div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <p for="birthday" >Date Of Birth</p>
+    <input type="date" name="birthday" formControlName="dateOfBirth" class="form-control" id="birthday" >
+    <div *ngIf="!dateOfBirth.valid && (!dateOfBirth.dirty || !dateOfBirth.touched)">
+      <div [hidden]="!dateOfBirth.errors.required"><p>* Date of birth is required </p></div>
+    </div>
+  </div>
+  <div class="col-md-12">
+    <p for="idCard" >Id Card</p>
+    <input type="text" class="form-control" formControlName="idCard" id="idCard" placeholder="Enter ID Card Of You" >
+  </div>
+  <div class="col-md-12">
+    <p for="phone" >Phone Number</p>
+    <input type="text" class="form-control" formControlName="phoneNumber" id="phone" placeholder="Enter Phone Number of you">
+
+  </div>
+  <div class=" mb-3 ">
+    <p for="customerType" >Customer Type</p>
+    <select name="customerType" id="customerType" class="form-control" formControlName="typeCustomer">
+      <option value="">ChooseCustomer Type</option>
+      <option *ngFor="let type of typeCustomer" [ngValue]="typeCustomer">{{type.name}}</option>
+    </select>
+  </div>
+
+  <div class="col-md-12 " id="s2" >
+    <p for="address" >Address</p>
+    <input type="text" formControlName="address" class="form-control" id="address" placeholder="Enter Address" >
+  </div>
+  <div class="col-12 mt-2">
+    <button type="submit" class="btn btn-primary w-100" data-bs-dismiss="modal" >Save</button>
+  </div>
+  </form>
+</div>

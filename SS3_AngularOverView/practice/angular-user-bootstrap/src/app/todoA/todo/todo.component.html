@@ -1,0 +1,54 @@
+<h2 class="text-center">
+  Todo App
+</h2>
+<div class="col-md-8 offset-md-2">
+  <input type="text"  class="form-control" [formControl]="todoForm" (change)="change()">
+  <ul>
+    <li (click)="toggleTodo(i)"
+    [class.complete]="todo.complete"
+    *ngFor="let todo of todos ; index as i">
+    {{todo.content}}<br>
+      <button type="button" (click)="getInfoToModal(todo)" class="btn btn-primary"
+              data-bs-toggle="modal" data-bs-target="#exampleModal">Delete</button>
+      <button type="button" (click)="getTodo(todo.id)" class="btn btn-primary ms-1"
+              data-bs-toggle="modal" data-bs-target="#exampleModal1"
+      > Edit</button>
+    </li>
+  </ul>
+</div>
+<!--modal-->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+          <P>content: {{todoDelete.content}}</P>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="deleteTodo(todoDelete.id)" data-bs-dismiss="modal" class="btn btn-primary">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel1" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel1">Edit Todo</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div class="form-label">Content:</div>
+        <input type="text" id="content" name="content" formControlName="content" >
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" (click)="editTodo(id)" data-bs-dismiss="modal" class="btn btn-primary">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>

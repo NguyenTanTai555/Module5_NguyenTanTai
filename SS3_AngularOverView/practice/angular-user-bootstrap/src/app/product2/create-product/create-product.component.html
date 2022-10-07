@@ -1,0 +1,34 @@
+
+<form [formGroup]="productForm" (ngSubmit)="submit()">
+  <div class="col-md-3 m-auto">
+    <h1>Tạo mới sản phẩm</h1>
+    <div>
+      <div class="form-label">Tên sản phẩm</div>
+      <input type="text" class="form-control" formControlName="name">
+      <div *ngIf="!name.valid && (!name.touched || !name.dirty)">
+        <div [hidden]="!name.errors.required">*Name is required</div>
+      </div>
+<!--      <div  *ngIf="productForm.controls.name.hasError('required')">-->
+<!--        <p class="text-danger">Fiel name is required . Please input ** </p>-->
+<!--      </div>-->
+    </div>
+    <div>
+      <div class="form-label">Giá</div>
+      <input type="text" class="form-control" formControlName="price">
+    </div>
+    <div>
+      <div class="form-label">Mô tả</div>
+      <input type="text" class="form-control" formControlName="description">
+    </div>
+    <div>
+      <div class="form-label">Thể loại</div>
+      <select name="category" id="category" class="form-select" formControlName="category">
+        <option disabled selected>Chọn thể loại</option>
+        <option *ngFor="let c of category " [ngValue]="c.id">{{c.name}}</option>
+      </select>
+    </div>
+    <div>
+      <button class="btn btn-primary form-control mt-2">Submit</button>
+    </div>
+  </div>
+</form>

@@ -1,0 +1,40 @@
+<div class="container mt-4 p-2 mb-4 bg-opacity-50" style="font-family: 'Bell MT' ">
+  <h1>Add new Product</h1>
+  <form [formGroup]="customer">
+    <div class="col-md-12">
+      <label for="name">Name</label>
+      <input type="text" class="form-control" id="name" formControlName="name" placeholder="Enter Name Here" >
+
+    </div>
+    <div class="col-md-12">
+      <label for="birthday">Date Of Birth</label>
+      <input type="date" class="form-control" id="birthday" formControlName="dateOfBirth">
+
+    </div>
+    <div class="col-md-12">
+      <label for="id_card" class="form-label">Id Card</label>
+      <input type="text" class="form-control" id="id_card" formControlName="idCard" placeholder="Enter ID Card Of You">
+    </div>
+    <div class="col-md-12">
+      <label for="phone">Phone Number</label>
+      <input type="text" class="form-control" id="phone" formControlName="phoneNumber" placeholder="Enter Phone Number of you">
+
+    </div>
+    <div class=" mb-3 ">
+      <div for="typeCustomer">Customer Type</div>
+      <select formControlName="typeCustomer" class="form-select">
+        <option value="">Choose Customer Type</option>
+        <option *ngFor="let type of typeCustomers" [ngValue]="typeCustomers">{{type.name}}</option>
+      </select>
+    </div>
+    <div class="col-md-12 " id="s2">
+      <div for="address">Address</div>
+      <input type="text" class="form-control" id="address" placeholder="Enter Address" formControlName="address">
+    </div>
+
+    <div class="col-12 mt-2">
+      <button type="submit" class="btn btn-primary w-100" data-bs-dismiss="modal"
+              (click)="addNewCustomer()" [disabled]="!customer.valid">Save</button>
+    </div>
+  </form>
+</div>

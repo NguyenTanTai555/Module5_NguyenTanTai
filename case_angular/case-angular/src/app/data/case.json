@@ -1,0 +1,308 @@
+{
+  "customer": [
+    {
+      "id": 1,
+      "name": "Nguyễn Tấn Tài",
+      "dateOfBirth": "1995-02-16",
+      "idCard": "201710892",
+      "phoneNumber": "0905774661",
+      "typeCustomer": {
+        "id": 1,
+        "name": "Platinum"
+      },
+      "address": "28 Phạm Văn Đồng"
+    },
+    {
+      "id": 2,
+      "name": "Nguyễn Tấn Tài",
+      "dateOfBirth": "1995-02-16",
+      "idCard": "201710892",
+      "phoneNumber": "0905774661",
+      "typeCustomer": {
+        "id": 2,
+        "name": "Gold"
+      },
+      "address": "28 Phạm Văn Đồng"
+    },
+    {
+      "id": 3,
+      "name": "Nguyễn Tấn Tài",
+      "dateOfBirth": "1995-02-16",
+      "idCard": "201710892",
+      "phoneNumber": "0905774661",
+      "typeCustomer": {
+        "id": 3,
+        "name": "Silver"
+      },
+      "address": "28 Phạm Văn Đồng"
+    },
+    {
+      "id": 4,
+      "name": "Nguyễn Tấn Tài",
+      "dateOfBirth": "1995-02-16",
+      "idCard": "201710892",
+      "phoneNumber": "0905774661",
+      "typeCustomer": {
+        "id": 4,
+        "name": "Diamond"
+      },
+      "address": "28 Phạm Văn Đồng"
+    },
+    {
+      "id": 5,
+      "name": "Nguyễn Tấn Tài",
+      "dateOfBirth": "1995-02-16",
+      "idCard": "201710892",
+      "phoneNumber": "0905774661",
+      "typeCustomer": {
+        "id": 5,
+        "name": "Member"
+      },
+      "address": "28 Phạm Văn Đồng"
+    },
+    {
+      "name": "Nguyen Van Cuong",
+      "dateOfBirth": "1995-11-11",
+      "idCard": "1",
+      "phoneNumber": "1",
+      "typeCustomer": {
+        "id": 1,
+        "name": "Platinum"
+      },
+      "address": "1",
+      "id": 6
+    }
+  ],
+  "typeCustomer": [
+    {
+      "id": 1,
+      "name": "Platinum"
+    },
+    {
+      "id": 2,
+      "name": "Gold"
+    },
+    {
+      "id": 3,
+      "name": "Silver"
+    },
+    {
+      "id": 4,
+      "name": "Diamond"
+    },
+    {
+      "id": 5,
+      "name": "Member"
+    }
+  ],
+  "facility": [
+    {
+      "facilityType": {
+        "id": 1
+      },
+      "id": 1,
+      "name": "Villa Ocean View",
+      "area": 400,
+      "numberOfFloor": 3,
+      "maxPeople": 15,
+      "cost": 20000000,
+      "rentType": {
+        "id": 1,
+        "name": "month"
+      },
+      "image": "../../../../assets/images/img_3.jpg"
+    },
+    {
+      "facilityType": {
+        "id": 1
+      },
+      "id": 2,
+      "name": "Villa Beach",
+      "area": 400,
+      "numberOfFloor": 3,
+      "maxPeople": 15,
+      "cost": 20000000,
+      "rentType": {
+        "id": 2,
+        "name": "Day"
+      },
+      "image": "../../../../assets/images/img_4.jpg"
+    },
+    {
+      "facilityType": {
+        "id": 1
+      },
+      "id": 3,
+      "name": "Villa Ocean View",
+      "area": 400,
+      "numberOfFloor": 3,
+      "maxPeople": 15,
+      "cost": 20000000,
+      "rentType": {
+        "id": 3,
+        "name": "Year"
+      },
+      "image": "../../../../assets/images/img_5.jpg"
+    },
+    {
+      "facilityType": {
+        "id": 1
+      },
+      "id": 4,
+      "name": "Villa Ocean View",
+      "area": 400,
+      "numberOfFloor": 3,
+      "maxPeople": 15,
+      "cost": 20000000,
+      "rentType": {
+        "id": 1,
+        "name": "Month"
+      },
+      "image": "../../../../assets/images/img_6.jpg"
+    },
+    {
+      "facilityType": {
+        "id": 1
+      },
+      "id": 6,
+      "name": "Villa Ocean View",
+      "area": 400,
+      "numberOfFloor": 3,
+      "maxPeople": 15,
+      "cost": 20000000,
+      "rentType": {
+        "id": 4,
+        "name": "House"
+      },
+      "image": "../../../../assets/images/img_8.jpg"
+    },
+    {
+      "facilityType": {
+        "id": 1
+      },
+      "id": 7,
+      "name": "Villa Ocean View",
+      "area": 400,
+      "numberOfFloor": 3,
+      "maxPeople": 15,
+      "cost": 20000000,
+      "rentType": {
+        "id": 4,
+        "name": "House"
+      },
+      "image": "../../../../assets/images/img_8.jpg"
+    },
+    {
+      "facilityType": {
+        "id": 1
+      },
+      "id": 8,
+      "name": "Villa Ocean View",
+      "area": 400,
+      "numberOfFloor": 3,
+      "maxPeople": 15,
+      "cost": 20000000,
+      "rentType": {
+        "id": 4,
+        "name": "House"
+      },
+      "image": "../../../../assets/images/img_8.jpg"
+    },
+    {
+      "facilityType": {
+        "id": 1
+      },
+      "id": 9,
+      "name": "Villa Ocean View",
+      "area": 400,
+      "numberOfFloor": 3,
+      "maxPeople": 15,
+      "cost": 20000000,
+      "rentType": {
+        "id": 4,
+        "name": "House"
+      },
+      "image": "../../../../assets/images/img_8.jpg"
+    },
+    {
+      "facilityType": {
+        "id": 1
+      },
+      "id": 10,
+      "name": "Villa Ocean View",
+      "area": 400,
+      "numberOfFloor": 3,
+      "maxPeople": 15,
+      "cost": 20000000,
+      "rentType": {
+        "id": 4,
+        "name": "House"
+      },
+      "image": "../../../../assets/images/img_8.jpg"
+    },
+    {
+      "facilityType": {
+        "id": 1
+      },
+      "id": 11,
+      "name": "Villa Ocean View",
+      "area": 400,
+      "numberOfFloor": 3,
+      "maxPeople": 15,
+      "cost": 20000000,
+      "rentType": {
+        "id": 4,
+        "name": "House"
+      },
+      "image": "../../../../assets/images/img_8.jpg"
+    },
+    {
+      "facilityType": {
+        "id": 1
+      },
+      "id": 12,
+      "name": "Villa Ocean View",
+      "area": 400,
+      "numberOfFloor": 3,
+      "maxPeople": 15,
+      "cost": 20000000,
+      "rentType": {
+        "id": 4,
+        "name": "House"
+      },
+      "image": "../../../../assets/images/img_8.jpg"
+    }
+  ],
+  "rentType": [
+    {
+      "id": 1,
+      "name": "Month"
+    },
+    {
+      "id": 2,
+      "name": "Day"
+    },
+    {
+      "id": 3,
+      "name": "Year"
+    },
+    {
+      "id": 4,
+      "name": "House"
+    }
+  ],
+  "facilityType": [
+    {
+      "id": 1,
+      "name": "Villa"
+    },
+    {
+      "id": 2,
+      "name": "House"
+    },
+    {
+      "id": 3,
+      "name": "Room"
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>CaseAngular</title>
+  <base href="/">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+</head>
+<body>
+<app-header></app-header>
+<app-root></app-root>
+<app-footer></app-footer>
+<script>
+  function showServiceInput(value) {
+    var v = value.value;
+    switch (v) {
+      case 'None':
+        document.getElementById("s1").style.display="none";
+        document.getElementById("s2").style.display="none";
+        document.getElementById("s3").style.display="none";
+        document.getElementById("s4").style.display="none";
+        document.getElementById("s5").style.display="none";
+        break;
+      case "1":
+        document.getElementById("s1").style.display="block";
+        document.getElementById("s2").style.display="block";
+        document.getElementById("s3").style.display="block";
+        document.getElementById("s4").style.display="block";
+        document.getElementById("s5").style.display="none";
+        break;
+      case "2":
+        document.getElementById("s1").style.display="block";
+        document.getElementById("s2").style.display="block";
+        document.getElementById("s4").style.display="block";
+        document.getElementById("s5").style.display="none";
+        document.getElementById("s3").style.display="none";
+        break;
+      case "3":
+        document.getElementById("s1").style.display="none";
+        document.getElementById("s2").style.display="none";
+        document.getElementById("s3").style.display="none";
+        document.getElementById("s4").style.display="none";
+        document.getElementById("s5").style.display="block";
+        break;
+    }
+  }
+  window.onload=function () {
+    if (document.getElementById("serviceSelect").value == '1') {
+      document.getElementById("s1").style.display = "block";
+      document.getElementById("s2").style.display = "block";
+      document.getElementById("s3").style.display = "block";
+      document.getElementById("s4").style.display = "block";
+      document.getElementById("s5").style.display = "none";
+    }
+    if (document.getElementById("serviceSelect").value == '2') {
+      document.getElementById("s1").style.display = "block";
+      document.getElementById("s2").style.display = "block";
+      document.getElementById("s4").style.display = "block";
+      document.getElementById("s5").style.display = "none";
+      document.getElementById("s3").style.display = "none";
+    }
+    if (document.getElementById("serviceSelect").value == '3') {
+      document.getElementById("s1").style.display = "none";
+      document.getElementById("s2").style.display = "none";
+      document.getElementById("s3").style.display = "none";
+      document.getElementById("s4").style.display = "none";
+      document.getElementById("s5").style.display = "block";
+    }
+  }
+</script>
+</body>
+</html>

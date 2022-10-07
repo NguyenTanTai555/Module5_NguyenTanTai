@@ -1,0 +1,78 @@
+<div class="container">
+
+  <h1 class="text-center text-black mt-4" style="font-family: 'Bell MT'">Customer List</h1>
+<!--  <form class="d-flex m-5">-->
+<!--    <input class="form-control me-2" type="search" placeholder="Search customer name" aria-label="Search"-->
+<!--           name="name">-->
+<!--    <select class="form-control me-2" type="search" placeholder="Search customer type" aria-label="Search"-->
+<!--            name="typeCustomer">-->
+<!--      <option selected disabled>Choose type you want search</option>-->
+<!--      <option ></option>-->
+<!--    </select>-->
+<!--    <button class="btn btn-outline-success" type="submit">Search</button>-->
+<!--  </form>-->
+ <div class="text-center" style="font-family: 'Bell MT'">
+  <button class="btn mb-2 opacity-50 text-light" style="background-color: #663300" routerLink="/customer-create">
+    Add new Customer
+  </button>
+ </div>
+  <table class="table table-striped table-view text-center " style="font-family: 'Bell MT'">
+    <thead>
+    <tr class="text-light opacity-75" style="background-color: #663300">
+      <th>#</th>
+      <th>Full name</th>
+      <th>Date of birth</th>
+      <th>Id Card</th>
+      <th>Phone Number</th>
+      <th>TypeCustomer</th>
+      <th>Address</th>
+      <th colspan="2">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let customer of customers; index as i">
+      <td>{{i + 1}}</td>
+      <td>{{customer.name}}</td>
+      <td>{{customer.dateOfBirth}}</td>
+      <td>{{customer.phoneNumber}}</td>
+      <td>{{customer.address}}</td>
+      <td>{{customer.typeCustomer.name}}</td>
+      <td>{{customer.idCard}}</td>
+      <td>
+        <button class="btn me-2 text-light opacity-75" [routerLink]="['/customer-edit/'+ customer.id]"
+                style="background-color: #663300">
+          Edit
+        </button>
+        <button type="button" class="btn border-0 bg-danger text-white opacity-75"
+                (click)="getInfoToModal(customer)" data-bs-toggle="modal" data-bs-target="#exampleModal">
+          Delete
+        </button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+  <!--Modal delete-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            Do you want delete customer
+            <p>name: {{customerDelete.name}}</p>
+            !!!
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" (click)="deleteCustomer(customerDelete.id)" data-bs-dismiss="modal"
+                  class="btn btn-primary">Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

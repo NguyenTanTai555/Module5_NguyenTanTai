@@ -1,0 +1,68 @@
+<div class="container w-50 mb-2 p-2" style="border: 1px solid grey;font-family: 'Bell MT'; border-radius: 15px">
+  <h3 class="text-center">Add Facility Form</h3>
+  <form class="row g-3" [formGroup]="facility" >
+    <div class="col-md-12">
+      <label class="form-label">Choose Service</label>
+      <select name="serviceType"   class="form-select" onchange="showServiceInput(this)" id="serviceSelect">
+        <option value="0" disabled selected>Choose Service :</option>
+        <option *ngFor="let facType of facilityType" [ngValue]="facType.id">{{facType.name}}</option>
+      </select>
+    </div>
+
+    <div class="col-md-12">
+      <label for="name" class="form-label">Facility Name :</label>
+      <input type="text" class="form-control" id="name" required>
+      <p class="text-danger"></p>
+    </div>
+
+    <div class="col-md-12">
+      <label for="area" class="form-label">Uses Are :</label>
+      <input type="text" class="form-control" id="area" required>
+      <p class="text-danger"></p>
+    </div>
+
+    <div class="col-md-12">
+      <label for="cost" class="form-label">Cost :</label>
+      <input type="text" class="form-control" id="cost"  required>
+      <p  class="text-danger"></p>
+    </div>
+
+    <div class="col-md-12">
+      <label for="max_people" class="form-label">Max People :</label>
+      <input type="text" class="form-control" id="max_people" required>
+      <p  class="text-danger"></p>
+    </div>
+    <div class="col-md-12">
+      <label  class="form-label">Rent Type :</label>
+      <select name="rentalType"  class="form-select" required>
+        <option value="0" disabled selected>Choose RentType</option>
+        <option *ngFor="let type of rentType" [ngValue]="rentType">{{type.name}}</option>
+      </select>
+    </div>
+    <div class="col-md-12 " id="s2" style="display: none">
+      <label for="description" class="form-label">Description</label>
+      <input type="text" class="form-control" id="description" >
+    </div>
+    <div class="col-md-12 " id="s3" style="display: none">
+      <label for="pool_area" class="form-label">Pool Are  </label>
+      <input type="text" class="form-control" id="pool_area" >
+    </div>
+    <div class="col-md-12" id="s4" style="display: none">
+      <label for="number_floors" class="form-label">Number Of floor </label>
+      <input type="text" class="form-control" id="number_floors" >
+    </div>
+    <div class="col-md-12 " id="s5" style="display: none">
+      <label for="facility_free" class="form-label">Service Free </label>
+      <input type="text" class="form-control" id="facility_free" >
+    </div>
+    <div class="col-md-12 " id="s6">
+    <div for="image">Image Link</div>
+    <input type="text" class="form-control" id="image" placeholder="Enter Address" formControlName="image">
+    </div>
+    <div class="col-12 ">
+      <button type="submit" class="btn btn-primary form-control" (click)="addNewFacility()">Submit</button>
+    </div>
+  </form>
+</div>
+
+

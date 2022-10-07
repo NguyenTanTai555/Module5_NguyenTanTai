@@ -1,0 +1,52 @@
+<div class="container-fluid col-md-8 m-auto mb-2" style="font-family: 'Bell MT'">
+  <form *ngIf="carForm" [formGroup]="carForm" (ngSubmit)="updateCar()">
+    <input type="text" hidden formControlName="id">
+    <h1>Form Creat Car</h1>
+    <div>
+      <label class="form-label">Loại Xe</label>
+      <input class="form-control" type="text" name="carType" id="carType" formControlName="typeCar">
+      <div class="text-danger" *ngIf="!typeCar.valid && (!typeCar.touched || !typeCar.valid) ">
+        <div [hidden]="!typeCar.errors.required">Trường này đang trống !! Vui lòng nhập ***</div>
+      </div>
+    </div>
+    <div formGroupName="carCenter">
+      <label class="form-label">Nhà Xe</label>
+      <select class="form-select" type="text" name="id" id="carCenter" formControlName="id">
+        <option *ngFor="let c of carCenters" [ngValue]="c.id">{{c.name}}</option>
+      </select>
+    </div>
+    <div formGroupName="startDestination">
+      <label class="form-label">Điểm đi</label>
+      <select class="form-select" type="text" name="id" id="starDestination" formControlName="id">
+        <option *ngFor="let t of travels" [ngValue]="t.id">{{t.name}}</option>
+      </select>
+    </div>
+    <div formGroupName="endDestination">
+      <label class="form-label">Điểm đên</label>
+      <select class="form-select" type="text" name="id" id="endDestination" formControlName="id">
+        <option *ngFor="let t of travels" [ngValue]="t.id">{{t.name}}</option>
+      </select>
+    </div>
+    <div>
+      <label class="form-label">Số Điện Thoại</label>
+      <input class="form-control" type="text" name="id" id="phoneNumber" formControlName="phoneNumber">
+    </div>
+    <div>
+      <label class="form-label">Email</label>
+      <input class="form-control" type="text" name="id" id="email" formControlName="email">
+    </div>
+    <div>
+      <label class="form-label">Giờ đi</label>
+      <input class="form-control" type="time"
+             required formControlName="startHouse">
+    </div>
+    <div>
+      <label class="form-label">Giờ đến</label>
+      <input class="form-control" type="time" required formControlName="endHouse">
+    </div>
+    <div class="mt-2">
+      <button type="submit" class="form-control btn btn-primary" [disabled]="!carForm.valid">Submit</button>
+    </div>
+  </form>
+</div>
+

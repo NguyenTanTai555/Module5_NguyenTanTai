@@ -1,0 +1,28 @@
+
+<form *ngIf="productForm" [formGroup]="productForm" (ngSubmit)="updateProduct()" class="m-auto col-md-3">
+  <div>
+  <h1 >Cập Nhật Sản Phẩm</h1>
+  <hr>
+  </div>
+  <div>
+    <div class="form-label">Tên sản phẩm</div>
+    <input class="form-control" type="text" formControlName="name">
+  </div>
+  <div>
+    <div class="form-label">Mã sản phẩm</div>
+    <input type="text" class="form-control" formControlName="id">
+  </div>
+  <div>
+    <div class="form-label">Mô tả</div>
+    <input type="text" class="form-control" formControlName="description">
+  </div>
+  <div>
+    <div class="form-label">Thể loại</div>
+    <select class="form-select" name="category" id="category" formControlName="category">
+      <option *ngFor="let c of categories" [ngValue]="c.id">{{c.name}}</option>
+    </select>
+  </div>
+  <div class="mt-2">
+    <button type="submit" (click)="updateProduct()" class="btn btn-primary form-control">Submit</button>
+  </div>
+</form>

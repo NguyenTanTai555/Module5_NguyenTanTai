@@ -1,0 +1,19 @@
+<h1>Danh sách từ điển </h1>
+<table class="table table-hover table-success  text-center">
+  <thead>
+  <tr>
+    <th>IWords</th>
+    <th>Mean</th>
+    <th>Action</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let words of iWords">
+    <td>{{words.word}}</td>
+    <td>{{words.mean}}</td>
+    <td>
+      <button class="btn btn-primary" [routerLink]="['/detail',words.word]">Detail</button>
+    </td>
+  </tr>
+  </tbody>
+</table>

@@ -1,0 +1,57 @@
+
+<div class="row" style="font-family: 'Bell MT'">
+  <div>
+    <div class="text-center">
+      <h1 class=" mt-2 p-1 opacity-75" style="size: A3">Facility List</h1>
+    </div>
+  </div>
+  <div class="text-center" >
+    <button class="btn opacity-50 m-2" style="background-color: #663300">
+      <h4 class="text-light m-2" routerLink="/facility-add">Add facility</h4>
+    </button>
+  </div>
+  <div *ngFor="let facility of facilities" class="col-md-3 ">
+    <div class="card ms-2" style="width: 18rem;">
+      <img src="{{facility.image}}" class="card-img-top"/>
+      <div class="card-body">
+        <h5 class="card-title">{{facility.name}}</h5>
+        <p class="card-text">RentalType: {{facility.rentType.name}}</p>
+        <p class="card-text">Cost : {{facility.cost}}</p>
+        <a href="#" class="btn opacity-75 text-light" style="background-color: #663300">Detail</a>
+        <a href="#" class="btn  opacity-75 ms-2 text-light"
+           style="background-color: #663300"
+           [routerLink]="['/facility-edit/'+facility.id]">Edit</a>
+        <button class="btn btn-warning opacity-75 text-light float-end"
+                data-bs-toggle="modal"
+                data-bs-target="#exampleModal"
+                (click)="getInFoToModal(facility)">
+          Delete
+        </button>
+      </div>
+    </div>
+  </div>
+  <!--  modal delete-->
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <div>
+            Do you want delete customer
+            <p>name: {{facilityDelete.name}}</p>
+            !!!
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" (click)="deleteFacility(facilityDelete.id)" data-bs-dismiss="modal"
+                  class="btn btn-primary">Delete
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

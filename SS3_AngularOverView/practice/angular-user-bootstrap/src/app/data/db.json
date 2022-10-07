@@ -1,0 +1,95 @@
+{
+  "product": [
+    {
+      "id": 7,
+      "name": "SamSung",
+      "price": 555555,
+      "description": "Like",
+      "category": {
+        "id": 1,
+        "name": "Thể loại 1"
+      }
+    },
+    {
+      "id": 8,
+      "name": "XiaoMi",
+      "price": "500000",
+      "description": "New New",
+      "category": {
+        "id": 1,
+        "name": "Thể Loại 1"
+      }
+    },
+    {
+      "name": "`1",
+      "price": "12",
+      "category": {
+        "id": 2,
+        "name": "Thể Loại 2"
+      },
+      "description": "12",
+      "id": 9
+    },
+    {
+      "name": "`1",
+      "price": "12",
+      "category": {
+        "id": 2,
+        "name": "Thể Loại 2"
+      },
+      "description": "12",
+      "id": 10
+    },
+    {
+      "name": "32",
+      "price": "32",
+      "category": {
+        "id": 1,
+        "name": "Thể Loại 1"
+      },
+      "description": "32",
+      "id": 11
+    },
+    {
+      "name": "32",
+      "price": "32",
+      "category": {
+        "id": 1,
+        "name": "Thể Loại 1"
+      },
+      "description": "32",
+      "id": 12
+    }
+  ],
+  "category": [
+    {
+      "id": 1,
+      "name": "Thể Loại 1"
+    },
+    {
+      "id": 2,
+      "name": "Thể Loại 2"
+    },
+    {
+      "id": 3,
+      "name": "Thể Loại 3"
+    }
+  ],
+  "todo": [
+    {
+      "id": 3,
+      "content": "hihihaha",
+      "complete": true
+    },
+    {
+      "id": 4,
+      "content": "hohohehe",
+      "complete": false
+    },
+    {
+      "content": "chào",
+      "complete": false,
+      "id": 5
+    }
+  ]
+}

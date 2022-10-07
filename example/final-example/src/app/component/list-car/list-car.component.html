@@ -1,0 +1,77 @@
+<div>
+  <h1 class="text-center">Danh sách các xe đăng ký</h1>
+  <div class="container-fluid m-auto d-flex">
+    <div class="col-md-5 me-1">
+      <input class="form-control me-2" type="search" #name placeholder="Search customer name" aria-label="Search"
+             name="name">
+    </div>
+    <div class="col-md-5 me-1">
+      <select class="form-control me-2" type="search" placeholder="Search customer type" aria-label="Search"
+              name="typeCustomer">
+      </select>
+    </div >
+    <button class="btn btn-outline-success col-md-2">Search</button>
+  </div>
+  <button class="btn btn-outline-primary m-2 text-center" routerLink="/car/create">Tạo mới sản phẩm</button>
+  <table class="container table table-hover mt-2">
+    <thead>
+    <tr class="text-center">
+      <th>Số Xe</th>
+      <th>Loại Xe</th>
+      <th>Tên Nhà Xe</th>
+      <th>Điểm Đi</th>
+      <th>Điểm Đến</th>
+      <th>Số Điện Thoại</th>
+      <th>Email</th>
+      <th>Giờ Đi</th>
+      <th>Giờ đến</th>
+      <th colspan="2">Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let car of cars; index as i" class="text-center">
+      <td>{{car.id}}</td>
+      <td>{{car.typeCar}}</td>
+      <td>{{car.carCenter.name}}</td>
+      <td>{{car.startDestination.name}}</td>
+      <td>{{car.endDestination.name}}</td>
+      <td>{{car.phoneNumber}}</td>
+      <td>{{car.email}}</td>
+      <td>{{car.startHouse}}</td>
+      <td>{{car.endHouse}}</td>
+      <td>
+        <button class="btn btn-outline-warning  me-2" [routerLink]="['/car/update/'+car.id]" >Edit</button>
+        <button class="btn btn-outline-danger"
+                data-bs-toggle="modal" data-bs-target="#exampleModal"
+                (click)="getInFoCar(car)"
+        >Delete</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+<div *ngIf="carDelete"  class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title text-danger" id="exampleModalLabel">Do you want delete product **
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <p>Số Xe {{carDelete.id}}</p>
+          <p>Nhà Xe {{carDelete.carCenter.name}}</p>
+          <p>Email:{{carDelete.email}}</p>
+          <p>Số Điện thoại :{{carDelete.phoneNumber}}</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button"  data-bs-dismiss="modal"
+                class="btn btn-primary">Delete
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

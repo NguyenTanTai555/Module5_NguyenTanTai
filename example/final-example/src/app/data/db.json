@@ -1,0 +1,58 @@
+{
+  "car": [
+    {
+      "id": 12356,
+      "carType": "Giường Nằm",
+      "carCenter": {
+        "id": 1,
+        "name": "Mai Linh"
+      },
+      "startDestination": {
+        "id": 1,
+        "name": "Đà Nẵng"
+      },
+      "endDestination": 4,
+      "phoneNumber": "0905774661",
+      "email": "lyseafood282930pvd@gmail.com",
+      "starHouse": "11:12",
+      "endHouse": "14:00",
+      "starDestination": 1
+    }
+  ],
+  "carCenter": [
+    {
+      "id": 1,
+      "name": "Mai Linh"
+    },
+    {
+      "id": 2,
+      "name": "Hoàng Long"
+    },
+    {
+      "id": 3,
+      "name": "Phương Trang"
+    }
+  ],
+  "travel": [
+    {
+      "id": 1,
+      "name": "Đà Nẵng"
+    },
+    {
+      "id": 2,
+      "name": "Hà Nội"
+    },
+    {
+      "id": 3,
+      "name": "Sài Gòn"
+    },
+    {
+      "id": 4,
+      "name": "Quảng Bình"
+    },
+    {
+      "id": 5,
+      "name": "Quảng Trị"
+    }
+  ]
+}
